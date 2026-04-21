@@ -9,3 +9,15 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+@keyframes like-scale {
+  100% {
+    scale: 1.25;
+  }
+}
+
+@keyframes sparks-opacity {
+  100% {
+    opacity: 1;
+  }
+}

@@ -13,4 +13,462 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font);
+  font-variation-settings: 'wght' var(--font-weight-normal, 415);
+  background-image: var(--horizontal-gradient), var(--vertical-gradient), var(--inset-gradient);
+  background-size: cover;
 }
+
+/*Шапка*/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: var(--clamp);
+  block-size: clamp(327px, calc(224.55px + 15.36vh), 372px);
+  background-color: var(--white, #FFFFFF);
+  border: 2px solid var(--black);
+  margin: 100px auto 98px;
+}
+
+.header_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  font-family: var(--accent-font);
+  font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  width: min-content;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-block-start: clamp(20px, 0.68vh + 15.5px, 22px);
+  /*padding: clamp(122px, calc(103.79px + 2.73vh), 130px) clamp(16px, calc(-21.5px + 10vw), 122.5px);*/
+}
+
+.header_text {
+  text-align: center;
+}
+
+
+.header_title span:first-child {
+  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+  vertical-align: bottom;
+}
+
+/*Основной контент*/
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 51px;
+  inline-size: var(--clamp);
+  margin: 0 auto;
+  /*border: 2px solid var(--black);*/
+  font-family: var(--main-font);
+  font-weight: var(--font-weight-normal);
+  line-height: 21px;
+  font-size: 18px;
+}
+
+.main_section {
+  background-color: var(--white, #FFFFFF);
+  border: 2PX solid var(--black);
+}
+
+.main_section_title {
+  padding: 5px 10px;
+  font-family: var(--main-font);
+  /*font-weight: var(--font-weight-bold, 715);*/
+  line-height: 100%;
+  font-size: 18px;
+  font-variation-settings: 'wght' var(--font-weight-bold, 715);
+  vertical-align: middle;
+}
+
+.main_section__image-wrapper {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  mix-blend-mode: hard-light;
+  opacity: 50%;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--black);
+  text-shadow: 
+  0 1px var(--white),
+  0 -1px var(--white),
+  1px 0 var(--white),
+  -1px 0 var(--white);
+}
+
+@supports ((-webkit-text-stroke: 1px var(--white)) or (text-stroke: 1px var(--white))) {
+  .label {
+    -webkit-text-stroke: 1px var(--white);
+    text-stroke: 1px var(--white);
+    text-shadow: none;
+  }
+}
+
+.main_section__text {
+  margin: 20px 25px 25px;
+}
+
+.main_section_image {
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+  object-fit: cover;
+  inline-size: 100%;
+}
+
+/*Кнопка в карточках*/
+
+.main_section__card {
+  position: relative;
+  width: 169px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  border: none;
+  margin: 0 31px 25px auto;
+  gap: 8px;
+}
+
+.card__like-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--black);
+  inline-size: 130px;
+  block-size: 38px;
+  background-color: transparent;
+}
+
+.like-icon{
+  width: 39px;
+  height: 36px;
+  background-color: transparent;
+  flex-shrink: 0;
+  display: block;
+}
+
+.card__icon-button {
+  padding: 0;
+  outline: 2px solid transparent;
+  outline-offset: -1px;
+  transition: outline-color 0.3s ease;
+  border: none;
+  background-color: transparent;
+}
+
+.card__icon-button:focus-visible {
+  outline-color: var(--black);
+  
+}
+
+.button__text {
+  position: relative;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-block;
+  padding: 12.5px 37px;
+  mix-blend-mode: difference;
+  z-index: 1;
+  color: var(--white);
+  background-color: var(--black);
+  cursor: pointer;
+}
+
+/*Подвал*/
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 49px 0 100px;
+}
+
+.footer_button {
+  border: 2px solid var(--black);
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-color: var(--white);
+}
+
+.footer_button_text {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  padding: 19.5px 18px 19.5px 0;
+  mix-blend-mode: difference;
+  z-index: 1;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.floppy {
+  position: relative;
+  z-index: 1;
+  margin-left: 18px;
+  mix-blend-mode: difference;
+  color: white;
+  height: 21px;
+  width: 21px;
+}
+
+
+/*Диалоговое окно*/
+
+.dialog[open] {
+  display: grid;
+  gap: 30px;
+  border: 2px solid var(--black);
+  padding-block-start: 30px;
+  padding-block-end: 29px;
+  padding-inline: 28px;
+  inline-size: 353px;
+}
+
+.dialog__content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.floppy__dialog {
+  height: 39px;
+  width: 39px;
+  flex-shrink: 0;
+}
+
+.dialog__text {
+  text-transform: uppercase;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.dialog__button {
+  border: 2px solid var(--black);
+  background-color: var(--white);
+  text-transform: uppercase;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 90%;
+  padding: 11px 128.5px;
+}
+
+.dialog__button_text {
+  position: relative;
+  mix-blend-mode: difference;
+  color: var(--white);
+  background-color: var(--black);
+  z-index: 1;
+}
+
+.dialog::backdrop {
+  background-color: rgba(0 0 0 / 0.75);
+}
+
+/*Фильтры*/
+
+.brightness {
+  filter: brightness(50%);
+}
+
+.blur {
+  filter: blur(2px);
+}
+
+.opacity {
+  filter: opacity(30%);
+}
+
+.grayscale {
+  filter: grayscale(0.8);
+}
+
+.hue-rotate{
+  filter: hue-rotate(-180deg);
+} 
+
+.sepia-brightness{
+  filter: sepia(70%) brightness(40%);
+} 
+
+.invert{
+  filter: invert(0.1);
+} 
+
+/*Кнопки - focus*/
+
+.button {
+  position: relative;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.card__like-button:focus  {
+  outline: none;
+}
+
+
+.button:focus {
+  box-shadow: 2px 2px 0 var(--black);
+  transition: 0.3s ease;
+}
+
+
+/*Кнопки - hover*/
+
+.button::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    transition: transform 0.5s ease-in-out;
+    background-color: var(--black);
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.button:hover::after {
+  transform: scaleX(1);
+}
+
+
+/*Адаптив*/
+
+@media (width <= 375px) {
+
+.header {
+  margin: 100px auto;
+}
+
+.main_section_title {
+  padding: 4px 10px;
+  line-height: 22px;
+}
+
+.header_title {
+ gap: 37px;
+}
+
+.footer_button {
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.floppy {
+  margin-top: 16px;
+  margin-left: 0;
+  height: 28px;
+  width: 28px;
+}
+
+.footer_button_text {
+  position: relative;
+  padding: 0 18px 15px 18px;
+}
+
+.dialog[open] {
+  inline-size: 341px;
+  block-size: 191px;
+  margin: auto;
+  padding-block-start: 28px;
+  padding-block-end: 28px;
+  padding-inline: 39px;
+}
+
+.dialog__button {
+  padding: 11px 115px;
+}
+
+}
+
+
+/*Анимация сердца*/ 
+
+.sparks {
+  opacity: 0;
+}
+
+.contour {
+  transition: fill 0.1s linear;
+  fill: var(--contour-color);
+}
+
+.main-body {
+  transition: fill 0.3s linear;
+  fill: transparent;
+}
+
+.core {
+  transition: fill 0.3s 0.03s linear;
+  fill: transparent;
+}
+
+/*Анимация сердца - ховер*/
+
+.like-icon:hover .core {
+  fill: var(--black);
+}
+
+.like-icon:hover .main-body {
+  transition-delay: 0.05s;
+  fill: var(--black);
+}
+
+/*Анимация сердца - актив*/
+
+.like-icon:active .core {
+  fill: var(--animation-fill-color);
+}
+
+.like-icon:active .main-body {
+  transition-delay: 0.05s;
+  fill: var(--animation-fill-color);
+}
+
+/*Анимация сердца - при клике*/
+
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+}
+
+.like-icon.is-liked .main-body {
+  transition-delay: 0.05s;
+  fill: var(--animation-fill-color);
+}
+
+
+.like-icon.is-liked .contour {
+  transition-delay: 0.06s;
+  fill: var(--animation-fill-color);
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: like-scale 0.3s ease-in 0.1s 1;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks-opacity 0.3s ease-in 0.3s 1;
+}
+
