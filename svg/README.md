@@ -8,3 +8,6 @@ https://github.com/mellow4stermellow-lab/zakrivayuschiy-teg-f
 1. Адаптивная, резиновая, верстка;
 2. Анимации, трансформации;
 3. Flex и Grid контейнеры. 
+
+#### Git pul: 
+https://mellow4stermellow-lab.github.io/zakrivayuschiy-teg-f/
