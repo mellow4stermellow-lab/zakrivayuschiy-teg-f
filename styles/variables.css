@@ -1,31 +1,44 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
-
 :root {
-
   /*Шрифты*/
-  --main-font: 'Inter-Variable', 'Inter', sans-serif;
-  --accent-font: 'PressStart2P', sans-serif;
+  --main-font: "Inter-Variable", "Inter", sans-serif;
+  --accent-font: "PressStart2P", sans-serif;
 
   /*Насыщенность main*/
   --font-weight-normal: 410;
   --font-weight-bold: 715;
 
   /*Background-color*/
-  --horizontal-gradient: repeating-linear-gradient(to right, #d3d3d3 0px, #d3d3d3 2px, rgba(211, 211, 211, 0) 2px, rgba(211, 211, 211, 0) 4px);
-  --vertical-gradient: repeating-linear-gradient(to bottom, #d3d3d3 0px, #d3d3d3 2px, rgba(211, 211, 211, 0) 2px, rgba(211, 211, 211, 0) 4px);
+  --horizontal-gradient: repeating-linear-gradient(
+    to right,
+    #d3d3d3 0px,
+    #d3d3d3 2px,
+    rgba(211, 211, 211, 0) 2px,
+    rgba(211, 211, 211, 0) 4px
+  );
+  --vertical-gradient: repeating-linear-gradient(
+    to bottom,
+    #d3d3d3 0px,
+    #d3d3d3 2px,
+    rgba(211, 211, 211, 0) 2px,
+    rgba(211, 211, 211, 0) 4px
+  );
   --inset-gradient: linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
 
   /*Ширина и высота блоков*/
-  --clamp: clamp(375px, calc(260.55px + 30.52vw), 700px);         /*clamp(375px, calc(259.16px + 30.89vw), 704px);- идеальная ширина для шапки, по макету шапка толще екций...*/
+  --main-clamp: clamp(
+    375px,
+    calc(260.55px + 30.52vw),
+    700px
+  ); /*clamp(375px, calc(259.16px + 30.89vw), 704px);- идеальная ширина для шапки, по макету шапка толще екций...*/
 
   /*Цвета*/
-  --white: #FFFFFF;
-  --black: #000000;
-  --animation-fill-color: #FF0000;
+  --color-text: #000000;
+  --background-color: #ffffff;
+  --animation-fill-color: #ff0000;
 
   /*Сердце*/
   --contour-color: var(--black);
   --sparks-color: var(--animation-fill-color);
-
 }
